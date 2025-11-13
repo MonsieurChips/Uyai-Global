@@ -52,8 +52,8 @@ const HomePage = () => {
 
     return (
         <main className="bg-gray-50">
-            <section className="bg-orange-100 py-20 px-6">
-                <div className="container mx-auto text-center">
+            <section className="bg-orange-100 py-20 px-6 h-[50vh]">
+                <div className="max-w-7xl mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold text-orange-800 mb-4">
                         Authentic Flavors, Delivered Fast.
                     </h1>
@@ -64,7 +64,7 @@ const HomePage = () => {
                 </div>
             </section>
             <section className="py-16 px-6">
-                <div className="container mx-auto">
+                <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
                         Our Popular Items
                     </h2>
@@ -76,20 +76,21 @@ const HomePage = () => {
                 </div>
             </section>
             <section className="py-16 px-6 bg-white">
-                <div className="container mx-auto">
+                <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
                         Soup Bowls
                     </h2>
                     <p className="text-center text-gray-500 mb-12">
                         (Available for Bulk Orders)
                     </p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" role="list">
                         {soupBowls.map((soup) => (
                             <div
                                 key={soup}
-                                className="bg-gray-50 border-2 border-orange-200 rounded-lg p-4 text-center transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                                role="listitem"
+                                className="bg-gray-50 border-2 border-orange-200 rounded-lg p-4 flex items-center justify-center h-24 md:h-28 text-center transform hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                             >
-                                <h4 className="text-lg font-medium text-gray-700">{soup}</h4>
+                                <h4 className="text-lg font-medium text-gray-700 truncate px-2">{soup}</h4>
                             </div>
                         ))}
                     </div>
